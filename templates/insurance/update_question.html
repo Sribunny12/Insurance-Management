@@ -1,0 +1,15 @@
+{% extends 'insurance/adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<div class="form-card">
+  <h3><i class="fas fa-reply"></i> Reply to Question</h3>
+  <form method="post" autocomplete="off">
+    {% csrf_token %}
+    <label for="description">Question</label>
+    {% render_field questionForm.description class="form-control" readonly="readonly" %}
+    <label for="admin_comment">Your Reply</label>
+    <input type="text" name="admin_comment" id="admin_comment" class="form-control" placeholder="Write your reply here" value="{{ questionForm.instance.admin_comment }}">
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>
+{% endblock content %}

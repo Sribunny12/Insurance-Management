@@ -1,0 +1,13 @@
+{% extends 'customer/customerbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<div class="form-card">
+  <h2><i class="fas fa-question-circle"></i> Ask a Question</h2>
+  <form method="POST" autocomplete="off">
+    {% csrf_token %}
+    <label for="description">Your Problem</label>
+    {% render_field questionForm.description class="form-control" placeholder="Describe your problem here" %}
+    <button type="submit" class="btn btn-primary">Ask</button>
+  </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends 'customer/customerbase.html' %}
+{% block content %}
+<div class="panel-card">
+  <div class="panel-heading"><h4><i class="fas fa-sync-alt"></i> Asked Question History</h4></div>
+  <table class="table table-hover mb-0">
+    <thead>
+      <tr><th>#</th><th>Question</th><th>Admin Reply</th><th>Asked Date</th></tr>
+    </thead>
+    <tbody>
+      {% for t in questions %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ t.description }}</td>
+        <td>{{ t.admin_comment }}</td>
+        <td>{{ t.asked_date }}</td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="4" class="text-center text-muted">You haven't asked any question yet.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock content %}

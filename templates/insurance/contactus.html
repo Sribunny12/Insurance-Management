@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Contact Us | Insurance Management System</title>
+  {% include "insurance/head_assets.html" %}
+</head>
+<body>
+  {% include "insurance/navbar.html" %}
+
+  <div class="page-wrap">
+    <div class="page-card">
+      <h2><i class="fa fa-envelope"></i> Send Us Your Valuable Feedback!</h2>
+      <form method="POST" autocomplete="off" class="text-left mt-4">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary btn-block mt-2">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  {% include "insurance/footer.html" %}
+</body>
+</html>

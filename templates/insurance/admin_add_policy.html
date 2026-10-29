@@ -1,0 +1,21 @@
+{% extends 'insurance/adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<div class="form-card">
+  <h2><i class="fas fa-plus"></i> Add Policy</h2>
+  <form method="POST" autocomplete="off">
+    {% csrf_token %}
+    <label for="category">Category</label>
+    {% render_field policyForm.category class="form-control" %}
+    <label for="policy_name">Policy Name</label>
+    {% render_field policyForm.policy_name class="form-control" placeholder="Type Here" %}
+    <label for="sum_assurance">Sum Assurance</label>
+    {% render_field policyForm.sum_assurance class="form-control" placeholder="1250000" %}
+    <label for="premium">Premium</label>
+    {% render_field policyForm.premium class="form-control" placeholder="70000" %}
+    <label for="tenure">Tenure (years)</label>
+    {% render_field policyForm.tenure class="form-control" placeholder="12" %}
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>
+{% endblock content %}

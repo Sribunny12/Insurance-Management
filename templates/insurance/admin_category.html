@@ -1,0 +1,38 @@
+{% extends 'insurance/adminbase.html' %}
+{% block content %}
+<h3 class="mb-4">Category</h3>
+<div class="row">
+  <div class="col-md-4 col-xl-3">
+    <a class="action-tile" href="admin-view-category">
+      <div class="stat-card"><div class="card-block">
+        <h6>View Category</h6>
+        <div class="text-center"><i class="fas fa-eye fa-2x"></i></div>
+      </div></div>
+    </a>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <a class="action-tile" href="admin-add-category">
+      <div class="stat-card"><div class="card-block">
+        <h6>Add Category</h6>
+        <div class="text-center"><i class="fas fa-plus fa-2x"></i></div>
+      </div></div>
+    </a>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <a class="action-tile" href="admin-update-category">
+      <div class="stat-card"><div class="card-block">
+        <h6>Update Category</h6>
+        <div class="text-center"><i class="fas fa-edit fa-2x"></i></div>
+      </div></div>
+    </a>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <a class="action-tile" href="admin-delete-category">
+      <div class="stat-card"><div class="card-block">
+        <h6>Delete Category</h6>
+        <div class="text-center"><i class="fas fa-trash fa-2x"></i></div>
+      </div></div>
+    </a>
+  </div>
+</div>
+{% endblock content %}

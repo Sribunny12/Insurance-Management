@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Message Sent | Insurance Management System</title>
+  {% include "insurance/head_assets.html" %}
+</head>
+<body>
+  {% include "insurance/navbar.html" %}
+
+  <div class="page-wrap">
+    <div class="page-card">
+      <i class="fa fa-check-circle" style="font-size:3rem;color:var(--success);"></i>
+      <h2 class="mt-3">Your message was sent successfully!</h2>
+      <p class="lead">We will respond to your feedback soon.</p>
+      <hr class="my-4">
+      <a class="btn btn-primary" href="/" role="button">Back to Home</a>
+    </div>
+  </div>
+
+  {% include "insurance/footer.html" %}
+</body>
+</html>

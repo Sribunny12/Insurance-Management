@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Admin Dashboard | Insurance Management System</title>
+  {% include "insurance/head_assets.html" %}
+</head>
+<body class="app-shell">
+
+  <input type="checkbox" id="check">
+
+  <header class="app-header">
+    <div class="d-flex align-items-center">
+      <label for="check"><i class="fas fa-bars" id="sidebar_btn"></i></label>
+      <span class="brand"><i class="fas fa-shield-alt"></i> Insurance Management</span>
+    </div>
+    <a href="/logout" class="logout_btn"><i class="fa fa-power-off"></i> Logout</a>
+  </header>
+
+  <div class="app-sidebar">
+    <div class="who">
+      <img src="{% static 'image/admin-icn.png' %}" class="profile_image" alt="Admin">
+      <h4>Administrator</h4>
+      <span>Admin Panel</span>
+    </div>
+
+    <a href="/admin-dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+    <a href="/admin-view-customer"><i class="fas fa-users"></i><span>Customers</span></a>
+    <a href="/admin-category"><i class="fas fa-list-alt"></i><span>Category</span></a>
+    <a href="/admin-policy"><i class="fas fa-file-contract"></i><span>Policy</span></a>
+    <a href="/admin-question"><i class="fas fa-question-circle"></i><span>Questions</span></a>
+  </div>
+
+  <div class="app-content">
+    {% block content %}
+    {% endblock content %}
+  </div>
+
+</body>
+</html>

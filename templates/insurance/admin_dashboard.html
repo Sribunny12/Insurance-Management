@@ -1,0 +1,73 @@
+{% extends 'insurance/adminbase.html' %}
+{% block content %}
+<h3 class="mb-4">Admin Dashboard</h3>
+<div class="row">
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="admin-view-customer">Total Registered Users</a></h6>
+        <div class="stat-row"><i class="fas fa-users"></i><span>{{ total_user }}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="admin-view-policy">Listed Policies</a></h6>
+        <div class="stat-row"><i class="fas fa-file-contract"></i><span>{{ total_policy }}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="admin-view-category">Listed Categories</a></h6>
+        <div class="stat-row"><i class="fas fa-list-alt"></i><span>{{ total_category }}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="admin-question">Total Questions</a></h6>
+        <div class="stat-row"><i class="fas fa-question-circle"></i><span>{{ total_question }}</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="admin-view-policy-holder">Applied Policy Holders</a></h6>
+        <div class="stat-row"><i class="fas fa-user-cog"></i><span>{{ total_policy_holder }}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="admin-view-approved-policy-holder">Approved Policy Holders</a></h6>
+        <div class="stat-row"><i class="fas fa-user-check"></i><span>{{ approved_policy_holder }}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="admin-view-disapproved-policy-holder">Disapproved Policy Holders</a></h6>
+        <div class="stat-row"><i class="fas fa-user-times"></i><span>{{ disapproved_policy_holder }}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="admin-view-waiting-policy-holder">Pending Policy Holders</a></h6>
+        <div class="stat-row"><i class="fas fa-user-clock"></i><span>{{ waiting_policy_holder }}</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

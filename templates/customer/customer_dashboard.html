@@ -1,0 +1,38 @@
+{% extends 'customer/customerbase.html' %}
+{% block content %}
+<h3 class="mb-4">Welcome, {{ request.user.first_name }}</h3>
+<div class="row">
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="apply-policy">Available Policies</a></h6>
+        <div class="stat-row"><i class="fas fa-file-contract"></i><span>{{ available_policy }}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="history">Applied Policies</a></h6>
+        <div class="stat-row"><i class="fas fa-file-signature"></i><span>{{ applied_policy }}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="/">Policy Categories</a></h6>
+        <div class="stat-row"><i class="fas fa-list-alt"></i><span>{{ total_category }}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-xl-3">
+    <div class="stat-card">
+      <div class="card-block">
+        <h6><a href="question-history">Questions Asked</a></h6>
+        <div class="stat-row"><i class="fas fa-question-circle"></i><span>{{ total_question }}</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static widget_tweaks %}
+<html lang="en">
+<head>
+  <title>Login | Insurance Management System</title>
+  {% include "insurance/head_assets.html" %}
+</head>
+<body>
+  {% include "insurance/navbar.html" %}
+
+  <div class="login-wrap">
+    <div class="login-card">
+      <div class="login-head">Login Panel</div>
+      <form method="post" autocomplete="off">
+        {% csrf_token %}
+        {% if form.errors %}
+          <div class="alert alert-danger">Invalid username or password. Please try again.</div>
+        {% endif %}
+        {% render_field form.username class="form-control" placeholder="Username" autocomplete="off" %}
+        {% render_field form.password class="form-control" placeholder="Password" %}
+        <button type="submit" class="btn btn-success">Login</button>
+      </form>
+    </div>
+  </div>
+
+  {% include "insurance/footer.html" %}
+</body>
+</html>

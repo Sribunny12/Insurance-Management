@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Insurance Management System</title>
+  {% include "insurance/head_assets.html" %}
+</head>
+<body>
+  {% include "insurance/navbar.html" %}
+
+  <section class="hero">
+    <div class="container">
+      <h1><i class="fa fa-shield-alt"></i> Insurance Management System</h1>
+      <p class="lead">Built with Python &amp; Django</p>
+      <p>Sign up now to start applying for your first policy</p>
+      <a href="/customer/customersignup" class="btn btn-cta"><i class="fa fa-user-plus"></i> Sign Up as Customer</a>
+      <p class="quote">&ldquo;Getting insurance is YOUR responsibility to your FAMILY and LOVED ONES. You may hate it, BUT it is your responsibility.&rdquo;<br><small>&mdash; Jeremiah Say</small></p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <i class="fa fa-list-alt"></i>
+            <h5>Browse Policies</h5>
+            <p class="text-muted mb-0">Explore policies across every category and pick the one that fits you best.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <i class="fa fa-file-signature"></i>
+            <h5>Apply Online</h5>
+            <p class="text-muted mb-0">Apply for a policy in a few clicks and track its approval status anytime.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <i class="fa fa-headset"></i>
+            <h5>Get Support</h5>
+            <p class="text-muted mb-0">Ask a question and get a direct reply from our administrators.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include "insurance/footer.html" %}
+</body>
+</html>

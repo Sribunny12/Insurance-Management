@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Customer Dashboard | Insurance Management System</title>
+  {% include "insurance/head_assets.html" %}
+</head>
+<body class="app-shell">
+
+  <input type="checkbox" id="check">
+
+  <header class="app-header">
+    <div class="d-flex align-items-center">
+      <label for="check"><i class="fas fa-bars" id="sidebar_btn"></i></label>
+      <span class="brand"><i class="fas fa-shield-alt"></i> Insurance Management</span>
+    </div>
+    <a href="/logout" class="logout_btn"><i class="fa fa-power-off"></i> Logout</a>
+  </header>
+
+  <div class="app-sidebar">
+    <div class="who">
+      {% if customer.profile_pic %}
+        <img src="{% static customer.profile_pic.url %}" class="profile_image" alt="{{ request.user.first_name }}">
+      {% else %}
+        <img src="{% static 'image/admin-icn.png' %}" class="profile_image" alt="{{ request.user.first_name }}">
+      {% endif %}
+      <h4>{{ request.user.first_name }}</h4>
+      <span>Customer</span>
+    </div>
+
+    <a href="/customer/customer-dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+    <a href="/customer/apply-policy"><i class="fas fa-file-contract"></i><span>Apply Policy</span></a>
+    <a href="/customer/history"><i class="fas fa-history"></i><span>History</span></a>
+    <a href="/customer/ask-question"><i class="fas fa-question-circle"></i><span>Ask Question</span></a>
+    <a href="/customer/question-history"><i class="fas fa-sync-alt"></i><span>Question History</span></a>
+  </div>
+
+  <div class="app-content">
+    {% block content %}
+    {% endblock content %}
+  </div>
+
+</body>
+</html>
